@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <title>DataEase Insights</title>
+  <style>body{font-family:Arial,Helvetica,sans-serif;padding:20px;}</style>
+</head>
+<body>
+  <h2>DataEase Insights — 活跃度趋势（示例）</h2>
+  <div id="content">加载中…</div>
+
+  <script>
+    async function load(){
+      const res = await fetch('/api/insights');
+      const data = await res.json();
+      const el = document.getElementById('content');
+      el.innerHTML = '';
+      const p = document.createElement('pre');
+      p.textContent = JSON.stringify(data, null, 2);
+      el.appendChild(p);
+    }
+    load();
+  </script>
+</body>
+</html>
