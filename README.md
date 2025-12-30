@@ -34,7 +34,7 @@ docker run -p 5000:5000 dataease-insights
 - data/sample_data.csv 示例数据
 - static/index.html 简单前端展示
 
-下一步建议
+下一步
 -
 - 用真实开源社区数据替换示例 CSV（GitHub API / GHTorrent / BigQuery 等）
 - 增加图表（Chart.js / ECharts）与交互筛选
