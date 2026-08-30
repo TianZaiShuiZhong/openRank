@@ -7,7 +7,9 @@ env/
 *.egg-info/
 dist/
 .DS_Store
+# Ignore local CSV exports, but keep the bundled demo dataset.
 data/*.csv
+!data/sample_data.csv
 /.pytest_cache/
 *.log
 instance/
